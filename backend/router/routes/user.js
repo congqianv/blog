@@ -5,10 +5,11 @@ const router = new KoaRouter()
 router.get('/register', async ctx => { })
 // 登录
 router.post('/login', async ctx => {
-  ctx.body = {
-    code: 0,
-    result: { a: 1 }
-  }
+  ctx.body = ctx.request.body;
+  // ctx.body = {
+  //   code: 0,
+  //   result: { a: 1 }
+  // }
 })
 
 

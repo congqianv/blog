@@ -1,6 +1,16 @@
 const app = require('./koa')
+
 // 引入配置文件
 const config = require('./config')
+
+// 引入body-paser
+const bodyParser = require('koa-bodyparser');
+app.use(bodyParser())
+
+// 引入跨域处理
+const cors=require('koa-cors')
+app.use(cors())
+
 // 引入路由
 const router = require('./router')
 
