@@ -3,7 +3,7 @@ const app = require('./koa')
 // 引入配置文件
 const config = require('./config')
 
-// 引入body-paser
+// 引入body-paser 需要在路由之前引入
 const bodyParser = require('koa-bodyparser');
 app.use(bodyParser())
 
