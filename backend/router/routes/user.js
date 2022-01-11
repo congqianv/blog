@@ -1,8 +1,11 @@
 const KoaRouter = require('koa-router');
-const router = new KoaRouter()
+const router = new KoaRouter({ prefix: '/user' })
+const UserController = require('../../controller/User')
 
 // 注册
-router.get('/register', async ctx => { })
+router.get('/register', async ctx => {
+  ctx.body = 'Hello'
+})
 // 登录
 router.post('/login', async ctx => {
   ctx.body = ctx.request.body;
